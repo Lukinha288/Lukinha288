@@ -1,22 +1,23 @@
 {%- if section.settings.show_product_recommendations -%}
   {%- if recommendations.performed -%}
     {%- if recommendations.products_count > 0 -%}
-      <div class="product-recommendations">
+      <div class="product-recommendations__inner">
         {%- if section.settings.heading != blank -%}
-          <h2 class="h2 text-center">{{ section.settings.heading | escape }}</h2>
+          <div class="section-header text-center">
+            <h2>{{ section.settings.heading | escape }}</h2>
+          </div>
         {%- endif -%}
-
-        <div class="grid grid--no-gutters grid--uniform collection-grid">
-          {%- assign grid_item_width = 'small--one-half medium-up--one-quarter' -%}
+        <ul class="grid grid--uniform grid--view-items">
           {%- for product in recommendations.products -%}
-            {%- assign price = product.price | money_without_trailing_zeros -%}
-            {% include 'product-grid-item' with product_image_spacing: true, vendor_enable: section.settings.vendor_enable %}
+            <li class="grid__item small--one-half medium-up--one-quarter">
+              {% include 'product-card-grid', max_height: 250, product: product, show_vendor: section.settings.show_vendor %}
+            </li>
           {%- endfor -%}
-        </div>
+        </ul>
       </div>
     {%- endif -%}
   {%- else  -%}
-    <div data-base-url="{{ routes.product_recommendations_url }}" data-product-id="{{ product.id }}" data-section-id="{{ section.id }}" data-section-type="product-recommendations"></div>
+    <div class="page-width" data-base-url="{{ routes.product_recommendations_url }}" data-product-id="{{ product.id }}" data-section-id="{{ section.id }}" data-section-type="product-recommendations"></div>
   {%- endif -%}
 {%- endif -%}
 
@@ -90,8 +91,8 @@
         "pt-PT": "As recomendações dinâmicas mudam e melhoram com o tempo. [Saiba mais](https://help.shopify.com/en/themes/development/recommended-products)",
         "sv": "Dynamiska rekommendationer ändras och förbättras med tiden. [Läs mer](https://help.shopify.com/en/themes/development/recommended-products)",
         "th": "คำแนะนำแบบไดนามิกนั้นเปลี่ยนแปลงและถูกปรับปรุงให้ดีขึ้นตลอดเวลา [ดูข้อมูลเพิ่มเติม](https://help.shopify.com/en/themes/development/recommended-products)",
-        "tr": "Dinamik önerileri zamanla değişir ve gelişir. [Daha fazla bilgi edinin](https://help.shopify.com/en/themes/development/recommended-products)",
-        "vi": "Đề xuất động thay đổi và cải thiện theo thời gian. [Tìm hiểu thêm](https://help.shopify.com/en/themes/development/recommended-products)",
+        "tr": "Dinamik öneriler zamanla değişir ve gelişir. [Daha fazla bilgi edinin](https://help.shopify.com/en/themes/development/recommended-products)",
+        "vi": "Đề xuất động sẽ được thay đổi và cải thiện theo thời gian. [Tìm hiểu thêm](https://help.shopify.com/en/themes/development/recommended-products)",
         "zh-CN": "动态推荐会随着时间而变化和改进。[了解详细信息](https://help.shopify.com/en/themes/development/recommended-products)",
         "zh-TW": "動態推薦會隨著時間改變與改進。[深入瞭解](https://help.shopify.com/en/themes/development/recommended-products)"
       },
@@ -117,7 +118,7 @@
         "pt-BR": "Título",
         "pt-PT": "Título",
         "sv": "Rubrik",
-        "th": "หัวเรื่อง",
+        "th": "ส่วนหัว",
         "tr": "Başlık",
         "vi": "Tiêu đề",
         "zh-CN": "标题",
@@ -149,30 +150,31 @@
     },
     {
       "type": "checkbox",
-      "id": "vendor_enable",
+      "id": "show_vendor",
       "label": {
-        "cs": "Zobrazit dodavatele produktu",
-        "da": "Vis produktleverandør",
-        "de": "Produktanbieter anzeigen",
-        "en": "Show product vendor",
-        "es": "Mostrar proveedor del producto",
-        "fi": "Näytä tuotteen myyjä",
-        "fr": "Afficher le distributeur du produit",
-        "it": "Mostra fornitore prodotto",
-        "ja": "商品の販売元を表示する",
-        "ko": "제품 공급 업체 표시",
-        "nb": "Vis produktleverandør",
-        "nl": "Productleverancier weergeven",
-        "pl": "Pokaż dostawcę produktu",
-        "pt-BR": "Exiba o fabricante do produto",
-        "pt-PT": "Mostrar fornecedor de produtos",
-        "sv": "Visa produktsäljare",
-        "th": "แสดงผู้ขายสินค้า",
-        "tr": "Ürün satıcısını göster",
-        "vi": "Hiển thị nhà cung cấp sản phẩm",
-        "zh-CN": "显示产品厂商",
-        "zh-TW": "顯示產品廠商"
-      }
+        "cs": "Zobrazit dodavatele",
+        "da": "Vis leverandør",
+        "de": "Lieferanten anzeigen",
+        "en": "Show vendor",
+        "es": "Mostrar proveedor",
+        "fi": "Näytä myyjä",
+        "fr": "Afficher les vendeurs",
+        "it": "Mostra fornitore",
+        "ja": "販売元を表示する",
+        "ko": "공급업체 표시",
+        "nb": "Vis leverandør",
+        "nl": "Leverancier weergeven",
+        "pl": "Pokaż dostawcę",
+        "pt-BR": "Exibir fabricante",
+        "pt-PT": "Mostrar fornecedor",
+        "sv": "Visa säljare",
+        "th": "แสดงผู้ขาย",
+        "tr": "Satıcıyı göster",
+        "vi": "Hiển thị nhà cung cấp",
+        "zh-CN": "显示厂商",
+        "zh-TW": "顯示廠商"
+      },
+      "default": false
     }
   ]
 }
