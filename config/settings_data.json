@@ -1,21 +1,21 @@
 {
   "current": {
-    "color_text": "#ff0000",
-    "color_body_text": "#f91111",
-    "color_button": "#ffffff",
-    "color_button_text": "#ff0000",
-    "color_small_button_text_border": "#ff0000",
-    "color_text_field_text": "#ff0000",
-    "color_text_field_border": "#ff0000",
+    "color_text": "#ffffff",
+    "color_body_text": "#ffffff",
+    "color_button": "#fffdfd",
+    "color_button_text": "#000000",
+    "color_small_button_text_border": "#ffffff",
+    "color_text_field_text": "#000000",
+    "color_text_field_border": "#fffdfd",
     "color_text_field": "#ffffff",
-    "color_image_overlay_text": "#ff0000",
-    "color_image_overlay": "#ff0000",
-    "image_overlay_opacity": 11,
-    "color_borders": "#ff0000",
+    "color_image_overlay_text": "#ffffff",
+    "color_image_overlay": "#f80000",
+    "image_overlay_opacity": 17,
+    "color_borders": "#ffffff",
     "color_body_bg": "#000000",
-    "type_header_font": "kalam_n4",
+    "type_header_font": "libre_baskerville_n4",
     "type_header_base_size": 28,
-    "type_base_font": "kalam_n4",
+    "type_base_font": "open_sans_n4",
     "type_base_size": 18,
     "sections": {
       "header": {
@@ -36,14 +36,14 @@
       "hero-1": {
         "type": "hero",
         "settings": {
-          "image": "shopify:\/\/shop_images\/Sem_Titulo-1_257f0693-0e3c-444e-a4f8-60eaa213a064.png",
+          "image": "shopify:\/\/shop_images\/lingerie-1-1280x720.jpg",
           "alignment": "center",
           "hero_layout": "full_width",
           "hero_size": "large",
           "text_size": "large",
-          "title": "TOY SEXS",
-          "text": "<p>Os melhores produtos para te satisfazer você só encontra aqui!<\/p><p><\/p>",
-          "button_label": "PRODUTOS",
+          "title": "TOYS SEXS",
+          "text": "<p>Os melhores produtos para te satisfazer você só encontra aqui. <\/p><p>Frete grátis para todo Brasil!<\/p><p><\/p>",
+          "button_label": "COMPRE JÁ",
           "button_link": "shopify:\/\/collections\/all"
         }
       },
@@ -107,42 +107,28 @@
           "show_view_all": false
         }
       },
-      "hero-2": {
-        "type": "hero",
-        "settings": {
-          "image": "shopify:\/\/shop_images\/Sem_Titulo-12_8fa35969-d2fa-410e-b250-9f8496402318.png",
-          "alignment": "center",
-          "hero_layout": "full_width",
-          "hero_size": "medium",
-          "text_size": "large",
-          "title": "Imagem com sobreposição de texto",
-          "text": "<p>Use o texto de sobreposição para apresentar insights sobre sua marca aos clientes. Selecione imagens e textos que reflitam seu estilo e sua história.<\/p>",
-          "button_label": "",
-          "button_link": ""
-        }
-      },
       "quotes": {
         "type": "quotes",
         "blocks": {
           "quotes-0": {
             "type": "quote",
             "settings": {
-              "quote": "<p>Adicione comentários e depoimentos para dar destaque aos clientes satisfeitos com a sua loja.<\/p>",
-              "author": "Nome do autor"
+              "quote": "<p>Se for me tratar como brinquedo, quero ser aquele que vibra!<\/p>",
+              "author": "DLC"
             }
           },
           "quotes-1": {
             "type": "quote",
             "settings": {
-              "quote": "<p>Adicione comentários e depoimentos para dar destaque aos clientes satisfeitos com a sua loja.<\/p>",
-              "author": "Nome do autor"
+              "quote": "<p>Sabe do que precisa?<\/p><p>SEXO<\/p>",
+              "author": "Transariano"
             }
           },
           "quotes-2": {
             "type": "quote",
             "settings": {
-              "quote": "<p>Adicione comentários e depoimentos para dar destaque aos clientes satisfeitos com a sua loja.<\/p>",
-              "author": "Nome do autor"
+              "quote": "<p>Quem manda é voce!<\/p>",
+              "author": "Gosotosinha"
             }
           }
         },
@@ -194,28 +180,9 @@
       },
       "footer": {
         "type": "footer",
-        "blocks": {
-          "footer-0": {
-            "type": "link_list",
-            "settings": {
-              "title": "Links rápidos",
-              "menu": ""
-            }
-          },
-          "footer-1": {
-            "type": "newsletter",
-            "settings": {
-              "title": "Newsletter"
-            }
-          }
-        },
-        "block_order": [
-          "footer-0",
-          "footer-1"
-        ],
         "settings": {
           "show_payment_icons": true,
-          "color_footer_bg": "#f6f6f6",
+          "color_footer_bg": "#000000",
           "color_footer_text": "#333232",
           "show_locale_selector": false,
           "show_currency_selector": false
@@ -228,16 +195,34 @@
           "grid": 4,
           "rows": 2,
           "show_collection_image": true,
-          "show_vendor": false,
+          "show_vendor": true,
           "sort_enable": true,
           "tags_enable": true
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "show_quantity_selector": false,
+          "show_vendor": false,
+          "enable_payment_button": true,
+          "show_share_buttons": true,
+          "media_size": "medium",
+          "enable_image_zoom": true,
+          "enable_video_looping": false
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "heading": "Talvez você também goste de",
+          "show_vendor": false
         }
       }
     },
     "content_for_index": [
       "hero-1",
-      "collection",
-      "hero-2",
       "quotes"
     ]
   },
