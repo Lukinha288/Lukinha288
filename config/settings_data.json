@@ -1,31 +1,50 @@
 {
   "current": {
+    "color_text": "#ff0000",
+    "color_body_text": "#f91111",
+    "color_button": "#ffffff",
+    "color_button_text": "#ff0000",
+    "color_small_button_text_border": "#ff0000",
+    "color_text_field_text": "#ff0000",
+    "color_text_field_border": "#ff0000",
+    "color_text_field": "#ffffff",
+    "color_image_overlay_text": "#ff0000",
+    "color_image_overlay": "#ff0000",
+    "image_overlay_opacity": 11,
+    "color_borders": "#ff0000",
+    "color_body_bg": "#000000",
+    "type_header_font": "kalam_n4",
+    "type_header_base_size": 28,
+    "type_base_font": "kalam_n4",
+    "type_base_size": 18,
     "sections": {
       "header": {
         "type": "header",
         "settings": {
           "align_logo": "left",
-          "logo_max_width": 100,
+          "logo": "shopify:\/\/shop_images\/Sem_Titulo-2_9a827b67-ea2a-4fe2-945c-ab542ee5c940.png",
+          "logo_max_width": 105,
           "main_linklist": "main-menu",
           "message": false,
           "home_page_only": true,
-          "message_text": "Anuncie algo aqui",
+          "message_text": "",
           "message_link": "",
-          "color_bg": "#3a3a3a",
+          "color_bg": "#f80000",
           "color_text": "#ffffff"
         }
       },
       "hero-1": {
         "type": "hero",
         "settings": {
+          "image": "shopify:\/\/shop_images\/Sem_Titulo-1_257f0693-0e3c-444e-a4f8-60eaa213a064.png",
           "alignment": "center",
           "hero_layout": "full_width",
           "hero_size": "large",
           "text_size": "large",
-          "title": "Imagem com sobreposição de texto",
-          "text": "<p>Use o texto de sobreposição para apresentar insights sobre sua marca aos clientes. Selecione imagens e textos que reflitam seu estilo e sua história.<\/p>",
-          "button_label": "",
-          "button_link": ""
+          "title": "TOY SEXS",
+          "text": "<p>Os melhores produtos para te satisfazer você só encontra aqui!<\/p><p><\/p>",
+          "button_label": "PRODUTOS",
+          "button_link": "shopify:\/\/collections\/all"
         }
       },
       "feature-row": {
@@ -91,6 +110,7 @@
       "hero-2": {
         "type": "hero",
         "settings": {
+          "image": "shopify:\/\/shop_images\/Sem_Titulo-12_8fa35969-d2fa-410e-b250-9f8496402318.png",
           "alignment": "center",
           "hero_layout": "full_width",
           "hero_size": "medium",
@@ -179,7 +199,7 @@
             "type": "link_list",
             "settings": {
               "title": "Links rápidos",
-              "menu": "footer"
+              "menu": ""
             }
           },
           "footer-1": {
@@ -197,14 +217,25 @@
           "show_payment_icons": true,
           "color_footer_bg": "#f6f6f6",
           "color_footer_text": "#333232",
-          "show_locale_selector": true,
-          "show_currency_selector": true
+          "show_locale_selector": false,
+          "show_currency_selector": false
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "layout": "grid",
+          "grid": 4,
+          "rows": 2,
+          "show_collection_image": true,
+          "show_vendor": false,
+          "sort_enable": true,
+          "tags_enable": true
         }
       }
     },
     "content_for_index": [
       "hero-1",
-      "feature-columns",
       "collection",
       "hero-2",
       "quotes"
