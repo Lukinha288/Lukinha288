@@ -35,6 +35,7 @@
       },
       "hero-1": {
         "type": "hero",
+        "disabled": true,
         "settings": {
           "image": "shopify:\/\/shop_images\/lingerie-1-1280x720.jpg",
           "alignment": "center",
@@ -109,6 +110,7 @@
       },
       "quotes": {
         "type": "quotes",
+        "disabled": true,
         "blocks": {
           "quotes-0": {
             "type": "quote",
